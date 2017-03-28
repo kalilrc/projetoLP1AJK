@@ -1,0 +1,67 @@
+#ifndef TELEVISAO_H_INCLUDED
+#define TELEVISAO_H_INCLUDED
+
+using namespace std;
+
+int aux, aux2;
+
+class Televisao{
+public:
+    Televisao(int a, int b){
+        setVolume(a);
+        setCanal(b);
+    }
+
+    void ControleVolume(){
+        cout<<"(1) Para aumentar o volume\n(2) Diminuir o volume"<<endl;
+        cin>>aux2;
+        if(aux2==1){
+            volume++;
+        }
+        if(aux2==2){
+            volume--;
+        }
+    }
+    void ControleCanal(){
+        cout<<"(1) Para o proximo canal\n(2) Canal anterior\n(3) Digitar Canal"<<endl;
+        cin>>aux;
+        if(aux==1){
+            canal++;
+        }
+        if(aux==2){
+            canal--;
+        }
+        if(aux==3){
+            cin>>aux;
+            setCanal(aux);
+        }
+
+    }
+
+    int Consulta(){
+        cout<<"Volume Atual:"<<getVolume()<<endl;
+        cout<<"Canal:"<<getCanal()<<endl;
+    }
+
+    void setVolume(int a){
+        volume=a;
+    }
+    void setCanal(int b){
+        canal=b;
+    }
+
+    int getVolume(){
+        return volume;
+    }
+    int getCanal(){
+        return canal;
+    }
+
+private:
+    int volume;
+    int canal;
+
+};
+
+
+#endif // TELEVISAO_H_INCLUDED

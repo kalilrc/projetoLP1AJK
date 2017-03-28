@@ -1,0 +1,29 @@
+#ifndef RELOGIOTESTE_H_INCLUDED
+#define RELOGIOTESTE_H_INCLUDED
+#include "relogio.h"
+
+using namespace std;
+
+class RelogioTeste{
+public:
+    void main(){
+        Horario teste1;
+        Horario teste2;
+
+        teste1.setHorario(20,30,17);
+        cout<<teste1.getHora()<<":"<<teste1.getMinuto()<<"'"<<teste1.getSegundo()<<"s"<<endl;
+
+        teste1.avancarHorario();
+        cout<<teste1.getHora()<<":"<<teste1.getMinuto()<<"'"<<teste1.getSegundo()<<"s"<<endl;
+
+        teste2.setHorario(21,33,59);
+        cout<<teste2.getHora()<<":"<<teste2.getMinuto()<<"'"<<teste2.getSegundo()<<"s"<<endl;
+
+        teste2.avancarHorario();
+        cout<<teste2.getHora()<<":"<<teste2.getMinuto()<<"'"<<teste2.getSegundo()<<"s"<<endl;
+
+
+    }
+};
+
+#endif // RELOGIOTESTE_H_INCLUDED

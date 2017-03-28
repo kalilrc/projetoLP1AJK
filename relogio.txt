@@ -1,0 +1,61 @@
+#ifndef RELOGIO_H_INCLUDED
+#define RELOGIO_H_INCLUDED
+
+using namespace std;
+
+class Horario{
+public:
+    setHorario(int a, int b, int c){
+        setHora(a);
+        setMinuto(b);
+        setSegundo(c);
+    }
+
+    void setHora(int a){
+        hora=a;
+    }
+    void setMinuto(int b){
+        minuto=b;
+    }
+    void setSegundo(int c){
+        segundo=c;
+    }
+
+    int getHora(){
+        return hora;
+    }
+    int getMinuto(){
+        return minuto;
+    }
+    int getSegundo(){
+        return segundo;
+    }
+
+    int avancarHorario(){
+
+        segundo=segundo+1;
+
+        if (segundo==60){
+            segundo=0;
+            minuto=minuto+1;
+        }
+        if (minuto==60){
+            minuto=0;
+            hora=hora+1;
+        }
+        if (hora==25){
+            hora=1;
+        }
+
+
+    }
+
+private:
+    int hora;
+    int minuto;
+    int segundo;
+
+};
+
+
+#endif // RELOGIO_H_INCLUDED

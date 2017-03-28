@@ -1,0 +1,32 @@
+#ifndef TELEVISAOTESTE_H_INCLUDED
+#define TELEVISAOTESTE_H_INCLUDED
+#include "televisao.h"
+
+using namespace std;
+
+class TelevisaoTeste{
+public:
+    void main(){
+        Televisao teste(50,1);
+        Televisao teste2(50,1);
+
+        teste.Consulta();
+        teste.ControleVolume();
+        teste.ControleCanal();
+        cout<<"Volume da Televisao 1:"<<teste.getVolume()<<endl;
+        cout<<"Canal atual da Televisao 1:"<<teste.getCanal()<<endl;
+
+        cout<<"____________________________________________________"<<endl;
+
+        teste2.Consulta();
+        teste2.ControleVolume();
+        teste2.ControleCanal();
+        cout<<"Volume da Televisao 2:"<<teste2.getVolume()<<endl;
+        cout<<"Canal atual da Televisao 2:"<<teste2.getCanal()<<endl;
+    }
+
+};
+
+
+
+#endif // TELEVISAOTESTE_H_INCLUDED
